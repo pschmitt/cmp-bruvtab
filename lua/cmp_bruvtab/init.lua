@@ -34,7 +34,7 @@ function source:complete(params, callback)
       word = w,
       label = w,
       labelDetails = {
-        detail = "BroTab"
+        detail = "BruvTab"
       },
     }
   end, bt_words)
