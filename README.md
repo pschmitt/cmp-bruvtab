@@ -1,19 +1,19 @@
-# cmp-brotab
+# cmp-bruvtab
 
-Browser tab content content completion for 
+Browser tab content content completion for
 [nvim-cmp](https://github.com/hrsh7th/nvim-cmp).
 
 # Requirements
 
 - [neovim](https://github.com/neovim/neovim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [BroTab](https://github.com/balta2ar/brotab)
+- [BruvTab](https://github.com/pschmitt/bruvtab)
 
 # Installation (packer.nvim)
 
 ```lua
 use {
-  'pschmitt/cmp-brotab',
+  'pschmitt/cmp-bruvtab',
   requires = "hrsh7th/nvim-cmp",
 }
 ```
@@ -23,7 +23,7 @@ use {
 ```lua
 require('cmp').setup({
   sources = {
-    { name = 'brotab' }
+    { name = 'bruvtab' }
   }
 })
 ```
@@ -33,12 +33,12 @@ require('cmp').setup({
 ```lua
 lvim.plugins = {
   {
-    "pschmitt/cmp-brotab"
+    "pschmitt/cmp-bruvtab"
     requires = "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     setup = function()
-      table.insert(lvim.builtin.cmp.sources, { name = "brotab" })
-      lvim.builtin.cmp.formatting.source_names.brotab = "(BROTAB)"
+      table.insert(lvim.builtin.cmp.sources, { name = "bruvtab" })
+      lvim.builtin.cmp.formatting.source_names.bruvtab = "(BRUVTAB)"
     end
   },
 }

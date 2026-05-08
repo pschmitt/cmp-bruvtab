@@ -8,7 +8,7 @@ end
 ---Return the debug name of this source. (Optional)
 ---@return string
 function source:get_debug_name()
-  return 'brotab'
+  return 'bruvtab'
 end
 
 function source:get_keyword_pattern()
@@ -21,7 +21,7 @@ end
 function source:complete(params, callback)
   local bt_words = {}
 
-  for line in io.popen("brotab words"):lines() do
+  for line in io.popen("bruvtab words"):lines() do
     table.insert(bt_words, line)
   end
 
@@ -58,7 +58,7 @@ function source:execute(completion_item, callback)
 end
 
 ---Register custom source to nvim-cmp.
--- This is done in after/plugin/cmp_brotab.lua
--- require('cmp').register_source('brotab', source.new())
+-- This is done in after/plugin/cmp_bruvtab.lua
+-- require('cmp').register_source('bruvtab', source.new())
 
 return source
